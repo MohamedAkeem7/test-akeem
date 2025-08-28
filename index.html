@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Website</title>
+    <title>TEST - Akeem</title>
     <!-- Bootstrap 4 (only for grid/layout) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Swiper.js -->
@@ -23,7 +23,7 @@
         <div class="nav-container"> 
             <!-- Left: Logo + Language -->
             <div class="nav-left"> <a href="#" class="logo">Company Logo</a> 
-                <select class="language-switcher">
+                <select id="languageSwitcher" class="language-switcher">
                     <option value="en">ENGLISH</option>
                     <option value="fr">FRENCH</option>
                     <option value="de">GERMAN</option>
@@ -49,7 +49,7 @@
     </section>
 
     <!-- About us Section -->
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="about-content">
             <div class="about-title sub-title">
                 About Us
@@ -62,7 +62,7 @@
     </section>
 
     <!-- News Section -->
-    <section class="news">
+    <section class="news" id="features">
         <div class="news-content">
             <div class="news-title sub-title">
                 Latest News
@@ -71,7 +71,7 @@
             <div class="news-container swiper News-Swiper">
                 <div class="swiper-wrapper">
                     <div class="card swiper-slide">
-                        <img src="assets/img1.png" class="card-img-top" alt="">
+                        <img data-src="assets/img1.png" class="card-img-top lazyload" alt="">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus</p>
                             <div class="read">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="card swiper-slide">
-                        <img src="assets/img2.png" class="card-img-top" alt="">
+                        <img data-src="assets/img2.png" class="card-img-top lazyload" alt="">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus</p>
                             <div class="read">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="card swiper-slide">
-                        <img src="assets/img3.png" class="card-img-top" alt="">
+                        <img data-src="assets/img3.png" class="card-img-top lazyload" alt="">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus</p>
                             <div class="read">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img1.png" class="card-img-top" alt="">
+                        <img data-src="assets/img1.png" class="card-img-top lazyload" alt="">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus</p>
                             <div class="read">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="card swiper-slide">
-                        <img src="assets/img2.png" class="card-img-top" alt="">
+                        <img data-src="assets/img2.png" class="card-img-top lazyload" alt="">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus</p>
                             <div class="read">
@@ -163,20 +163,36 @@
     </section>
 
 
-  <!-- Contact Section -->
-    <section class="contact">
+<!-- <section class="contact" id="contact">
         <div class="contact-content">
             <div class="about-title sub-title" id="pd-top">
                 Contact
                 <hr>
             </div>
             <div class="map">
-                <img src="assets/map_img.png" width="100%" height="auto"/>
-                <img src="assets/map-marker-icon.svg" alt="Map Pin" class="map-pin" />
+                <img data-src="assets/map_img.png" width="100%" height="auto" class="lazyload"/>
+                <img data-src="assets/map-marker-icon.svg" alt="Map Pin" class="map-pin lazyload" />
             </div>
         </div>
-    </section>
+</section> -->
 
+<!-- Contact and map Section -->
+<section class="map-section" id="contact">
+    <div class="contact-content">
+        <div class="about-title sub-title" id="pd-top">
+            Contact
+            <hr>
+        </div>
+    </div>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.8781841832476!2d-80.83730535969897!3d35.2286407101146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a022d78b3de7%3A0x9f5c6731be8cbf86!2sUNC%20Charlotte%20Center%20City!5e0!3m2!1sen!2slk!4v1756455934198!5m2!1sen!2slk" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>   
 
   <!-- Footer -->
   <footer class="footer">
@@ -189,11 +205,11 @@
       </div>
       <div class="social">
         <p class="stay-connected">Stay connected with</p>
-        <a href="#"><img src="assets/facebook.svg" /></a>
-        <a href="#"><img src="assets/twitter.svg" /></a>
-        <a href="#"><img src="assets/insta.svg" /></a>
-        <a href="#"><img src="assets/linkedin.svg" /></a>
-        <a href="#"><img src="assets/youtube.svg" /></a>
+        <a href="#facebook"><img data-src="assets/facebook.svg" class="lazyload" /></a>
+        <a href="#twitter"><img data-src="assets/twitter.svg" class="lazyload" /></a>
+        <a href="#intagrame"><img data-src="assets/insta.svg" class="lazyload" /></a>
+        <a href="#linkedin"><img data-src="assets/linkedin.svg" class="lazyload" /></a>
+        <a href="#youtube"><img data-src="assets/youtube.svg" class="lazyload" /></a>
       </div>
     </div>
 

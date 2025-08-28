@@ -29,6 +29,10 @@ h2 {
   font-size: 32px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =========================== Navbar Section Style =========================== */
 .navbar {
   position: fixed;
@@ -389,7 +393,38 @@ h2 {
   z-index: 2;
 }
 
-/* ============================= Contact Section Styles ============================= */
+.map-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.map-section .map-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.map-section .map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map-section .map-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+}
+
+/* ============================= Footer Section Styles ============================= */
 .footer {
   background-color: #0864b1;
   padding: 50px 40px 30px;
@@ -574,6 +609,9 @@ h2 {
   .footer .container .footet-content .stay-connected,
   .footer .container .social .stay-connected {
     margin-top: 40px;
+  }
+  .map-section .map-container {
+    height: 300px;
   }
 }
 @media (max-width: 595px) {
